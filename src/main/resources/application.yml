@@ -1,0 +1,27 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.8.49.146:3306/guitarmall
+    username: root
+    password: root
+
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+
+  http:
+    encoding:
+      force: true
+
+mybatis:
+    type-aliases-package: cn.tarena.gm.pojo
+    config-location: classpath:/mybatis/mybatis-config.xml
+    mapper-locations: classpath:/mybatis/mappers/*.xml
+
+shiro:
+   configLocation: classpath:/ehcache-shiro.xml
+

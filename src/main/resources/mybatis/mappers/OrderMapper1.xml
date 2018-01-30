@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tarena.gm.mapper.OrderMapper1">
+
+	<insert id="addOrder">
+		insert into orders
+		(id,money,paystate,receiverinfo,ordertime,user_id) values
+		(#{id},#{money},
+		#{paystate},#{receiverinfo},#{ordertime},#{user_id})
+
+
+	</insert>
+	<insert id="addOrderItem">
+		insert into orderitem (order_id,product_id,buynum) values
+		(#{order_id},#{product_id},#{buynum})
+	</insert>
+
+
+
+</mapper>
